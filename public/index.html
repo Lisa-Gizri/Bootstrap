@@ -4,13 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bootstrap</title>
+    <title>Bootstrap Sidebar</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@3.0.0/reset.min.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="Assets/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
@@ -18,91 +17,140 @@
     <div class="container-fluid">
         <div class="row">
             <!-- Sidebar -->
-            <nav class="col-md-2 d-none d-md-block bg-dark text-white p-3">
+            <nav id="sidebar" class="col-md-2 d-flex flex-column bg-dark text-white sidebar">
                 <div class="sidebar-logo">
                     <img class="sidebar-logo-img" src="Assets/Images/logo.png" alt="Logo">
                     <h4>Dashboard Kit</h4>
-                </div>                
-                <a href="#" class="nav-link-active d-flex align-items-center">
-                    <img src="Assets/Images/Overview.png" alt="Overview Icon"> Overview
-                </a>
-                <a href="#" class="nav-link disabled d-flex align-items-center" aria-disabled="true">
-                    <img src="Assets/Images/Tickets.png" alt="Tickets Icon"> Tickets
-                </a>
-                <a href="#" class="nav-link disabled d-flex align-items-center" aria-disabled="true">
-                    <img src="Assets/Images/Ideas.png" alt="Tickets Icon"> Ideas
-                </a>
-                <a href="#" class="nav-link disabled d-flex align-items-center" aria-disabled="true">
-                    <img src="Assets/Images/Contacts.png" alt="Tickets Icon"> Contacts
-                </a>
-                <a href="#" class="nav-link disabled d-flex align-items-center" aria-disabled="true">
-                    <img src="Assets/Images/Agents.png" alt="Tickets Icon"> Agents
-                </a>
-                <a href="#" class="nav-link disabled d-flex align-items-center" aria-disabled="true">
-                    <img src="Assets/Images/Articles.png" alt="Tickets Icon"> Articles
-                </a>
-                <a href="#" class="nav-link disabled d-flex align-items-center" aria-disabled="true">
-                    <img src="Assets/Images/Settings.png" alt="Tickets Icon"> Settings
-                </a>
-                <a href="#" class="nav-link disabled d-flex align-items-center" aria-disabled="true">
-                    <img src="Assets/Images/Subscription.png" alt="Tickets Icon"> Subscription
-                </a>
+                </div>
+
+                <ul class="nav flex-column sidebar-menu">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link active">
+                            <img src="Assets/Images/Overview.png" alt="Overview Icon"> Overview
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <img src="Assets/Images/Tickets.png" alt="Tickets Icon"> Tickets
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <img src="Assets/Images/Ideas.png" alt="Ideas Icon"> Ideas
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <img src="Assets/Images/Contacts.png" alt="Contacts Icon"> Contacts
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <img src="Assets/Images/Agents.png" alt="Agents Icon"> Agents
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <img src="Assets/Images/Articles.png" alt="Articles Icon"> Articles
+                        </a>
+                    </li>
+                    <li class="nav-item mt-auto">
+                        <a href="#" class="nav-link">
+                            <img src="Assets/Images/Settings.png" alt="Settings Icon"> Settings
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <img src="Assets/Images/Subscription.png" alt="Subscription Icon"> Subscription
+                        </a>
+                    </li>
+                </ul>
             </nav>
-            
-            <!-- Main Content -->
+
             <main class="col-md-10 p-4">
-                <h4>Overview</h4>
-                <div class="row g-3">
+                <!-- Top Navbar -->
+                <div class="d-flex justify-content-between align-items-center p-3">
+                    <h4 class="mb-0">Overview</h4>
+                    <div class="d-flex align-items-center gap-3">
+                        <img src="Assets/Images/search.png" alt="Search" width="20">
+                        <div class="position-relative">
+                            <img src="Assets/Images/notification.png" alt="Notifications" width="20">
+                            <span
+                                class="badge bg-primary rounded-circle position-absolute top-0 start-100 translate-middle p-1"></span>
+                        </div>
+                        <div class="d-flex align-items-center gap-2">
+                            <span class="fw-semibold">Jones Ferdinand</span>
+                            <img src="Assets/Images/photo.png" class="rounded-circle" width="32" height="32">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row g-3 mt-4">
                     <div class="col-md-3">
                         <div class="card p-3 text-center">
-                            <h6>Unresolved</h6>
+                            <h6 class="text-muted">Unresolved</h6>
                             <h2>60</h2>
                         </div>
                     </div>
                     <div class="col-md-3">
                         <div class="card p-3 text-center border-primary">
-                            <h6>Overdue</h6>
+                            <h6 class="text-muted">Overdue</h6>
                             <h2 class="text-primary">16</h2>
                         </div>
                     </div>
                     <div class="col-md-3">
                         <div class="card p-3 text-center">
-                            <h6>Open</h6>
+                            <h6 class="text-muted">Open</h6>
                             <h2>43</h2>
                         </div>
                     </div>
                     <div class="col-md-3">
                         <div class="card p-3 text-center">
-                            <h6>On Hold</h6>
+                            <h6 class="text-muted">On Hold</h6>
                             <h2>64</h2>
                         </div>
                     </div>
                 </div>
-                
-                <div class="row mt-4">
-                    <div class="col-md-6">
-                        <div class="card p-3">
-                            <h6>Unresolved Tickets</h6>
-                            <ul class="list-group">
-                                <li class="list-group-item">Waiting on Feature Request <span class="badge bg-secondary">4238</span></li>
-                                <li class="list-group-item">Awaiting Customer Response <span class="badge bg-secondary">1005</span></li>
-                                <li class="list-group-item">Awaiting Developer Fix <span class="badge bg-secondary">914</span></li>
-                                <li class="list-group-item">Pending <span class="badge bg-secondary">281</span></li>
-                            </ul>
+
+                <!-- Graph & Stats Section - Single White Background -->
+                <div class="card p-4 mt-4">
+                    <div class="row">
+                        <!-- Left Side - Image Placeholder -->
+                        <div class="col-md-8">
+                            <h6 class="fw-bold mb-1">Today's trends</h6>
+                            <p class="text-muted small">as of 25 May 2019, 09:41 PM</p>
+                            <img src="Assets/Images/full graph.png" alt="Graph Image" class="img-fluid rounded mt-2">
                         </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="card p-3">
-                            <h6>Tasks</h6>
-                            <ul class="list-group">
-                                <li class="list-group-item d-flex justify-content-between">Finish Ticket Update <span class="badge bg-danger">URGENT</span></li>
-                                <li class="list-group-item d-flex justify-content-between">Create New Ticket Example <span class="badge bg-success">NEW</span></li>
-                                <li class="list-group-item d-flex justify-content-between">Update Ticket Report <span class="badge bg-secondary">DEFAULT</span></li>
-                            </ul>
+
+                        <!-- Right Side - Statistics -->
+                        <div class="col-md-4 d-flex flex-column justify-content-center">
+                            <div class="d-flex justify-content-between pb-3">
+                                <span class="text-muted">Resolved</span>
+                                <span class="fw-bold">449</span>
+                            </div>
+                            <div class="d-flex justify-content-between pb-3">
+                                <span class="text-muted">Received</span>
+                                <span class="fw-bold">426</span>
+                            </div>
+                            <div class="d-flex justify-content-between pb-3">
+                                <span class="text-muted text-wrap">Average first response time</span>
+                                <span class="fw-bold">33m</span>
+                            </div>
+                            <div class="d-flex justify-content-between pb-3">
+                                <span class="text-muted text-wrap">Average response time</span>
+                                <span class="fw-bold">3h 8m</span>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <span class="text-muted text-wrap">Resolution within SLA</span>
+                                <span class="fw-bold">94%</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </main>
+
+
+
+
         </div>
     </div>
 

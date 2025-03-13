@@ -1,3 +1,4 @@
+/* General Styles */
 body {
     font-family: "Mulish", sans-serif;
     background-color: #F7F8FC;
@@ -5,32 +6,24 @@ body {
     padding: 0;
 }
 
+/* Sidebar Styles */
 .sidebar {
     height: 100vh;
-    background-color: #363740 !important;
+    background-color: #363740;
     color: white;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: flex-start;
-    position: relative;
-}
-
-nav.col-md-2 {
-    background-color: #363740 !important;
-    color: white;
-    padding: 20px;
-    height: 100vh;
+    position: fixed;
+    width: 300px;
 }
 
 .sidebar-logo {
     display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-top: 37px;
-    margin-left: 32px;
-    margin-bottom: 81px;
-    position: relative;
+    align-items: center; /* Ensures vertical alignment */
+    gap: 12px; /* Space between icon and text */
+    padding: 10px 32px;
+    margin-top: 37px; /* Adjust this value as needed */
 }
 
 .sidebar-logo-img {
@@ -44,94 +37,219 @@ nav.col-md-2 {
     font-size: 19px;
     font-weight: 600;
     margin: 0;
+    line-height: 1;
 }
 
-.sidebar a {
-    text-decoration: none;
-    color: white;
-    display: block;
-    font-size: 16px;
-    font-weight: 500;
-    padding: 12px;
-    transition: background 0.3s;
+
+
+/* Sidebar Menu */
+.sidebar-menu {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.sidebar-menu .nav-item {
+    width: 100%;
 }
 
 .sidebar-menu a {
     text-decoration: none;
-    color: white;
+    color: #A4A6B3;
     display: flex;
     align-items: center;
     font-size: 16px;
     font-weight: 500;
-    padding: 12px 16px;
-    transition: background 0.3s;
+    padding: 12px 32px;
+    transition: all 0.3s ease;
     gap: 12px;
 }
 
-.nav-link-active {
+.sidebar-menu a img {
+    width: 20px;
+    height: 20px;
+}
+
+.sidebar-menu a.active {
     color: #DDE2FF;
-    margin-bottom: 36px;
-    margin-left: 72px;
-    text-decoration: none
+    background-color: rgba(221, 226, 255, 0.1);
+    border-left: 4px solid #DDE2FF;
+    padding-left: 28px;
 }
 
-.nav-link.disabled {
-    margin-top: 36px;
-    color: #A4A6B3 !important;
-    margin-left: 72px;
+.sidebar-menu a:hover {
+    color: #DDE2FF;
+    background-color: rgba(221, 226, 255, 0.05);
 }
 
-.sidebar a:hover {
-    background-color: #3e4155;
-    border-radius: 5px;
-}
-
-.card {
+/* .stat-card {
     border: none;
     border-radius: 12px;
+    background: white;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    background-color: white;
     padding: 20px;
 }
 
-.card h6 {
+.stat-card h6 {
+    font-size: 14px;
     color: #6c757d;
-    font-size: 0.9rem;
     font-weight: 600;
+    margin-bottom: 5px;
 }
 
-.card h2 {
+.stat-card h2 {
+    font-size: 28px;
     font-weight: bold;
     color: #333;
-    font-size: 2rem;
 }
 
-.list-group-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border: none;
-    padding: 12px;
-    font-size: 1rem;
-}
-
-.list-group-item .badge {
-    font-size: 0.9rem;
-    padding: 6px 12px;
+.active-card {
+    border: 2px solid #3b82f6 !important;
     border-radius: 8px;
 }
 
-.badge.bg-danger {
+.stat-summary p {
+    font-size: 14px;
+    color: #333;
+    font-weight: 600;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.list-group-item {
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.badge {
+    font-size: 14px;
+    padding: 6px 10px;
+    border-radius: 8px;
+}
+
+.bg-danger {
     background-color: #dc3545;
-    color: white;
 }
 
-.badge.bg-success {
+.bg-success {
     background-color: #28a745;
-    color: white;
 }
 
-.badge.bg-secondary {
+.bg-secondary {
     background-color: #6c757d;
-    color: white;
+} */
+
+main {
+    margin-left: 285px;
+    width: calc(100% - 285px);
 }
+
+.top-navbar {
+    padding: 15px 20px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mb-0 {
+    color: #252733;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.row.g-3 {
+    display: flex;
+    justify-content: space-between; /* Ensures equal spacing */
+    align-items: center;
+    flex-wrap: nowrap; /* Prevents wrapping */
+    gap: 4px;
+}
+
+.row.g-3.mt-4 {
+    margin-left: 10px;
+}
+
+.card {
+    flex: 1; /* Ensures all cards take equal space */
+    width: 300px; /* Keeps consistent sizing */
+    height: 134px; /* Matches your design */
+    padding: 35px !important;
+    text-align: center;
+    border-radius: 8px; /* Smooth rounded corners */
+    border: 1px solid #E0E3EB; /* Light gray border */
+    background: white;
+    box-shadow: none; /* Removes any extra shadow */
+}
+
+
+
+.card.border-primary {
+    position: relative; /* Ensures proper layering */
+    border: 2px solid #3B82F6 !important; /* Primary blue border */
+    border-radius: 8px; /* Keeps smooth edges */
+}
+
+/* Outer stroke effect */
+.card.border-primary::before {
+    content: "";
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+    border: 2px solid #DDE2FF; /* Outer light stroke */
+    border-radius: 10px; /* Makes sure it follows the shape */
+    z-index: -1; /* Places it behind the card */
+}
+
+.card.border-primary h6 {
+    color: #3B82F6 !important; /* Matches the blue border */
+    font-weight: 600; /* Optional: Makes it slightly bolder */
+}
+
+/* .card.p-4 {
+    border-radius: 12px;
+    border: 1px solid #DFE0EB;
+    background: white;
+    box-shadow: none;
+    width: 900px;
+} */
+
+/* Image Size for Graph */
+/* .img-fluid {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px;
+} */
+
+
+
+/* Responsive Sidebar */
+/* @media (max-width: 768px) {
+    .sidebar {
+        width: 80px;
+        align-items: center;
+    }
+
+    .sidebar-logo h4 {
+        display: none;
+    }
+
+    .sidebar-menu a {
+        justify-content: center;
+        padding: 12px;
+    }
+
+    .sidebar-menu a span {
+        display: none;
+    }
+
+    .sidebar-menu a.active {
+        border-left: none;
+    }
+} */
