@@ -211,21 +211,57 @@ main {
     font-weight: 600; /* Optional: Makes it slightly bolder */
 }
 
-/* .card.p-4 {
-    border-radius: 12px;
-    border: 1px solid #DFE0EB;
-    background: white;
-    box-shadow: none;
-    width: 900px;
-} */
 
-/* Image Size for Graph */
-/* .img-fluid {
+
+/* Ensure Full-Width & Alignment */
+/* Ensure Full Width & Height */
+/* Ensure Full Background for Graph & Stats Section */
+.full-card {
+    width: 100%;
+    min-height: 400px; /* Ensures full background */
+    border-radius: 12px;
+    border: 1px solid #E0E3EB;
+    background: white;
+    padding: 24px;
+    display: flex;
+    align-items: stretch; /* Ensures everything fills the height */
+}
+
+/* Graph Image Styling */
+.img-fluid {
     width: 100%;
     height: auto;
     object-fit: contain;
     border-radius: 8px;
-} */
+}
+
+/* Stats Box - Aligns Items Properly */
+.stats-box {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+    border-left: 1px solid #E0E3EB; /* Adds a dividing line like the reference */
+    padding-left: 24px; /* Ensures spacing */
+}
+
+/* Each Stat Item */
+.stat-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 0;
+    border-bottom: 1px solid #E0E3EB;
+}
+
+/* Remove Bottom Border on Last Item */
+.stat-item:last-child {
+    border-bottom: none;
+}
+
+
+
+
+
 
 
 
