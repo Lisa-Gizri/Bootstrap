@@ -20,10 +20,13 @@ body {
 
 .sidebar-logo {
     display: flex;
-    align-items: center; /* Ensures vertical alignment */
-    gap: 12px; /* Space between icon and text */
+    align-items: center;
+    /* Ensures vertical alignment */
+    gap: 12px;
+    /* Space between icon and text */
     padding: 10px 32px;
-    margin-top: 37px; /* Adjust this value as needed */
+    margin-top: 37px;
+    /* Adjust this value as needed */
 }
 
 .sidebar-logo-img {
@@ -163,9 +166,11 @@ main {
 
 .row.g-3 {
     display: flex;
-    justify-content: space-between; /* Ensures equal spacing */
+    justify-content: space-between;
+    /* Ensures equal spacing */
     align-items: center;
-    flex-wrap: nowrap; /* Prevents wrapping */
+    flex-wrap: nowrap;
+    /* Prevents wrapping */
     gap: 4px;
 }
 
@@ -174,23 +179,32 @@ main {
 }
 
 .card {
-    flex: 1; /* Ensures all cards take equal space */
-    width: 300px; /* Keeps consistent sizing */
-    height: 134px; /* Matches your design */
+    flex: 1;
+    /* Ensures all cards take equal space */
+    width: 300px;
+    /* Keeps consistent sizing */
+    height: 134px;
+    /* Matches your design */
     padding: 35px !important;
     text-align: center;
-    border-radius: 8px; /* Smooth rounded corners */
-    border: 1px solid #E0E3EB; /* Light gray border */
+    border-radius: 8px;
+    /* Smooth rounded corners */
+    border: 1px solid #E0E3EB;
+    /* Light gray border */
     background: white;
-    box-shadow: none; /* Removes any extra shadow */
+    box-shadow: none;
+    /* Removes any extra shadow */
 }
 
 
 
 .card.border-primary {
-    position: relative; /* Ensures proper layering */
-    border: 2px solid #3B82F6 !important; /* Primary blue border */
-    border-radius: 8px; /* Keeps smooth edges */
+    position: relative;
+    /* Ensures proper layering */
+    border: 2px solid #3B82F6 !important;
+    /* Primary blue border */
+    border-radius: 8px;
+    /* Keeps smooth edges */
 }
 
 /* Outer stroke effect */
@@ -201,14 +215,19 @@ main {
     left: -4px;
     right: -4px;
     bottom: -4px;
-    border: 2px solid #DDE2FF; /* Outer light stroke */
-    border-radius: 10px; /* Makes sure it follows the shape */
-    z-index: -1; /* Places it behind the card */
+    border: 2px solid #DDE2FF;
+    /* Outer light stroke */
+    border-radius: 10px;
+    /* Makes sure it follows the shape */
+    z-index: -1;
+    /* Places it behind the card */
 }
 
 .card.border-primary h6 {
-    color: #3B82F6 !important; /* Matches the blue border */
-    font-weight: 600; /* Optional: Makes it slightly bolder */
+    color: #3B82F6 !important;
+    /* Matches the blue border */
+    font-weight: 600;
+    /* Optional: Makes it slightly bolder */
 }
 
 
@@ -216,98 +235,99 @@ main {
 /* Ensure Full-Width & Alignment */
 /* Ensure Full Width & Height */
 /* Ensure Full Background for Graph & Stats Section */
+/* Ensure Full Background for Graph & Stats Section */
 .full-card {
     width: 100%;
-    min-height: 680px; /* Ensures full background */
+    min-height: 680px;
     border-radius: 12px;
     border: 1px solid #E0E3EB;
     background: white;
     padding: 24px;
     display: flex;
-    align-items: stretch; /* Ensures everything fills the height */
+    align-items: stretch;
+    margin-top: 50px;
+    /* Add margin above the graph */
 }
 
-/* Ensure Title & Date are Left-Aligned */
+/* Ensure Title & Date Alignment */
 .col-lg-8 h6,
 .col-lg-8 p {
-    text-align: left !important;
-    margin: 0; /* Remove any unwanted spacing */
+    text-align: left;
+    margin: 0;
 }
 
 .col-lg-8 h6 {
-    margin-top: 20px;
     font-size: 19px;
 }
 
 .col-lg-8 p {
     font-size: 12px;
-    padding-top: 8px;
     color: #9FA2B4 !important;
-    margin-bottom: 54px;
+    margin-bottom: 20px;
 }
 
-/* Wrapper to Align Title, Date & Legend */
-.legend-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: nowrap; /* Prevents line breaks */
-    width: 100%;
+/* Align Graph with Margin */
+.graph-wrapper {
+    margin-top: 50px;
+    /* Adds spacing between graph and title */
 }
 
-/* Ensure Legend Image is Right-Aligned & Matches Graph Width */
+/* Align Legend Image to the Right */
 .legend-img {
-    height: 20px; /* Keep the size correct */
+    height: 20px;
     width: auto;
     object-fit: contain;
-    max-width: 100%; /* Ensures responsiveness */
-    margin-left: auto; /* Forces the legend to the right */
-    margin-top: 45px;
+    max-width: 100%;
+    margin-left: auto;
 }
 
-/* Ensure the legend aligns to the end of the graph */
-.col-lg-8 {
-    position: relative;
-}
-
-/* Position the legend at the end of the graph */
-.legend-img {
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: translateY(50%); /* Aligns it to the center of the title */
-}
-
-/* Graph Image Styling */
-.img-fluid {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-    border-radius: 8px;
-}
-
-/* Stats Box - Aligns Items Properly */
-.stats-box {
+/* Right-Side Stats Section */
+.stats-container {
     display: flex;
     flex-direction: column;
-    height: 100%;
-    justify-content: space-between;
-    border-left: 1px solid #E0E3EB; /* Adds a dividing line like the reference */
-    padding-left: 24px; /* Ensures spacing */
+    justify-content: center;
+    padding-left: 50px;
+    /* Ensures spacing between graph and stats */
 }
 
-/* Each Stat Item */
+/* Individual Stat Items */
 .stat-item {
     display: flex;
-    justify-content: space-between;
-    padding: 16px 0;
-    border-bottom: 1px solid #E0E3EB;
+    flex-direction: column;
+    /* Ensures text is stacked */
+    align-items: center;
+    /* Centers text horizontally */
+    padding: 35px 0;
+    border-bottom: 1px solid #E0E3EB !important;
+    text-align: center;
+    /* Centers text in the column */
 }
 
-/* Remove Bottom Border on Last Item */
-.stat-item:last-child {
-    border-bottom: none;
+/* Remove border from last stat item */
+.stats-item:last-of-type {
+    border: none !important;
 }
+
+/* Adjust Font Sizes & Weight */
+.stat-label {
+    color: #9FA2B4;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.stat-value {
+    font-size: 24px;
+    font-weight: bold;
+    display: block;
+    /* Ensures it's always on a new line */
+}
+
+
+
+
+
+
+
 
 
 
