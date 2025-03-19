@@ -288,7 +288,11 @@
     }
 
     .row.gx-4 {
-        margin-top: 50px;
+        margin-top: 40px;
+    }
+
+    .custom-card {
+        height: 250px;
     }
 
     /* Fix List Group Styling */
@@ -304,9 +308,10 @@
     }
 
     .custom-list-group {
-        border: none; /* Remove default box border */
+        border: none;
+        /* Remove default box border */
     }
-    
+
     /* Add clean dividers instead of a box */
     .custom-list-group .list-group-item {
         display: flex;
@@ -316,9 +321,13 @@
         border-right: none;
         border-radius: 0;
         padding: 15px 20px;
-        background-color: white; /* Ensure no shadow effect */
+        background-color: white;
+        /* Ensure no shadow effect */
         margin-bottom: 10px;
-
+        padding-bottom: 20px;
+        width: calc(100% + 40px); /* Extend lines to full width */
+        margin-left: -20px; /* Shift to align with the card */
+        margin-right: -20px;
     }
 
     .custom-list-group .list-group-item span:last-child {
@@ -326,7 +335,7 @@
         color: #252733;
         font-size: 16px;
     }
-    
+
     /* Ensure the last list item doesn't have a border */
     .custom-list-group .list-group-item:last-child {
         border-bottom: none;
@@ -363,8 +372,8 @@
 
     /* Fix Task Section */
     .form-check-input {
-        width: 15px;
-        height: 15px;
+        width: 20px;
+        height: 20px;
         border-radius: 50px;
         /* Makes it circular */
         border: 2px solid #B0B3C2;
@@ -398,6 +407,10 @@
         position: relative;
     }
 
+    .col-lg-6:last-child .custom-list-group .list-group-item:first-child {
+        border-top: 1px solid #E0E3EB;
+    }
+
     /* Ensure Buttons are Aligned */
     .btn-light {
         border: none;
@@ -425,6 +438,40 @@
         color: white !important;
         font-size: 11px !important;
     }
+
+    .text-muted.small.mb-0 {
+        font-size: 16px !important;
+        padding-bottom: 20px;
+
+    }
+
+    /* Style the add task button */
+    .add-task-btn {
+        width: 32px;
+        height: 32px;
+        border-radius: 8px;
+        background-color: #F7F8FC;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: background-color 0.2s ease-in-out;
+        margin-bottom: 20px;
+    }
+    
+
+    .add-task-btn:hover {
+        background-color: #E0E3EB;
+    }
+
+    /* Style the plus icon */
+    .plus-icon {
+        font-size: 20px;
+        font-weight: bold;
+        color: #9FA2B4;
+    }
+
 
 
 
