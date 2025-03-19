@@ -325,8 +325,10 @@
         /* Ensure no shadow effect */
         margin-bottom: 10px;
         padding-bottom: 20px;
-        width: calc(100% + 40px); /* Extend lines to full width */
-        margin-left: -20px; /* Shift to align with the card */
+        width: calc(100% + 40px);
+        /* Extend lines to full width */
+        margin-left: -20px;
+        /* Shift to align with the card */
         margin-right: -20px;
     }
 
@@ -459,7 +461,7 @@
         transition: background-color 0.2s ease-in-out;
         margin-bottom: 20px;
     }
-    
+
 
     .add-task-btn:hover {
         background-color: #E0E3EB;
@@ -471,6 +473,8 @@
         font-weight: bold;
         color: #9FA2B4;
     }
+
+    
 
 
 
