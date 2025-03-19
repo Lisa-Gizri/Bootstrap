@@ -1,372 +1,547 @@
-/* General Styles */
-body {
-    font-family: "Mulish", sans-serif;
-    background-color: #F7F8FC;
-    margin: 0;
-    padding: 0;
-}
-
-/* Sidebar Styles */
-.sidebar {
-    height: 100vh;
-    background-color: #363740;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    position: fixed;
-    width: 300px;
-}
-
-.sidebar-logo {
-    display: flex;
-    align-items: center;
-    /* Ensures vertical alignment */
-    gap: 12px;
-    /* Space between icon and text */
-    padding: 10px 32px;
-    margin-top: 37px;
-    /* Adjust this value as needed */
-}
-
-.sidebar-logo-img {
-    width: 32px;
-    height: 32px;
-    object-fit: contain;
-}
-
-.sidebar-logo h4 {
-    color: #A4A6B3;
-    font-size: 19px;
-    font-weight: 600;
-    margin: 0;
-    line-height: 1;
-}
-
-
-
-/* Sidebar Menu */
-.sidebar-menu {
-    list-style: none;
-    padding-left: 0;
-    margin-top: 20px;
-    width: 100%;
-}
-
-.sidebar-menu .nav-item {
-    width: 100%;
-}
-
-.sidebar-menu a {
-    text-decoration: none;
-    color: #A4A6B3;
-    display: flex;
-    align-items: center;
-    font-size: 16px;
-    font-weight: 500;
-    padding: 12px 32px;
-    transition: all 0.3s ease;
-    gap: 12px;
-}
-
-.sidebar-menu a img {
-    width: 20px;
-    height: 20px;
-}
-
-.sidebar-menu a.active {
-    color: #DDE2FF;
-    background-color: rgba(221, 226, 255, 0.1);
-    border-left: 4px solid #DDE2FF;
-    padding-left: 28px;
-}
-
-.sidebar-menu a:hover {
-    color: #DDE2FF;
-    background-color: rgba(221, 226, 255, 0.05);
-}
-
-/* .stat-card {
-    border: none;
-    border-radius: 12px;
-    background: white;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-}
-
-.stat-card h6 {
-    font-size: 14px;
-    color: #6c757d;
-    font-weight: 600;
-    margin-bottom: 5px;
-}
-
-.stat-card h2 {
-    font-size: 28px;
-    font-weight: bold;
-    color: #333;
-}
-
-.active-card {
-    border: 2px solid #3b82f6 !important;
-    border-radius: 8px;
-}
-
-.stat-summary p {
-    font-size: 14px;
-    color: #333;
-    font-weight: 600;
-    padding: 8px 0;
-    border-bottom: 1px solid #eee;
-}
-
-.list-group-item {
-    font-size: 16px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.badge {
-    font-size: 14px;
-    padding: 6px 10px;
-    border-radius: 8px;
-}
-
-.bg-danger {
-    background-color: #dc3545;
-}
-
-.bg-success {
-    background-color: #28a745;
-}
-
-.bg-secondary {
-    background-color: #6c757d;
-} */
-
-main {
-    margin-left: 285px;
-    width: calc(100% - 285px);
-}
-
-.top-navbar {
-    padding: 15px 20px;
-    border-radius: 8px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.mb-0 {
-    color: #252733;
-    font-size: 24px;
-    font-weight: 600;
-}
-
-.row.g-3 {
-    display: flex;
-    justify-content: space-between;
-    /* Ensures equal spacing */
-    align-items: center;
-    flex-wrap: nowrap;
-    /* Prevents wrapping */
-    gap: 4px;
-}
-
-.row.g-3.mt-4 {
-    margin-left: 10px;
-}
-
-.card {
-    flex: 1;
-    /* Ensures all cards take equal space */
-    width: 300px;
-    /* Keeps consistent sizing */
-    height: 134px;
-    /* Matches your design */
-    padding: 35px !important;
-    text-align: center;
-    border-radius: 8px;
-    /* Smooth rounded corners */
-    border: 1px solid #E0E3EB;
-    /* Light gray border */
-    background: white;
-    box-shadow: none;
-    /* Removes any extra shadow */
-}
-
-
-
-.card.border-primary {
-    position: relative;
-    /* Ensures proper layering */
-    border: 2px solid #3B82F6 !important;
-    /* Primary blue border */
-    border-radius: 8px;
-    /* Keeps smooth edges */
-}
-
-/* Outer stroke effect */
-.card.border-primary::before {
-    content: "";
-    position: absolute;
-    top: -4px;
-    left: -4px;
-    right: -4px;
-    bottom: -4px;
-    border: 2px solid #DDE2FF;
-    /* Outer light stroke */
-    border-radius: 10px;
-    /* Makes sure it follows the shape */
-    z-index: -1;
-    /* Places it behind the card */
-}
-
-.card.border-primary h6 {
-    color: #3B82F6 !important;
-    /* Matches the blue border */
-    font-weight: 600;
-    /* Optional: Makes it slightly bolder */
-}
-
-
-
-/* Ensure Full-Width & Alignment */
-/* Ensure Full Width & Height */
-/* Ensure Full Background for Graph & Stats Section */
-/* Ensure Full Background for Graph & Stats Section */
-.full-card {
-    width: 100%;
-    min-height: 680px;
-    border-radius: 12px;
-    border: 1px solid #E0E3EB;
-    background: white;
-    padding: 24px;
-    display: flex;
-    align-items: stretch;
-    margin-top: 50px;
-    /* Add margin above the graph */
-}
-
-/* Ensure Title & Date Alignment */
-.col-lg-8 h6,
-.col-lg-8 p {
-    text-align: left;
-    margin: 0;
-}
-
-.col-lg-8 h6 {
-    font-size: 19px;
-}
-
-.col-lg-8 p {
-    font-size: 12px;
-    color: #9FA2B4 !important;
-    margin-bottom: 20px;
-}
-
-/* Align Graph with Margin */
-.graph-wrapper {
-    margin-top: 50px;
-    /* Adds spacing between graph and title */
-}
-
-/* Align Legend Image to the Right */
-.legend-img {
-    height: 20px;
-    width: auto;
-    object-fit: contain;
-    max-width: 100%;
-    margin-left: auto;
-}
-
-/* Right-Side Stats Section */
-.stats-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-left: 50px;
-    /* Ensures spacing between graph and stats */
-}
-
-/* Individual Stat Items */
-.stat-item {
-    display: flex;
-    flex-direction: column;
-    /* Ensures text is stacked */
-    align-items: center;
-    /* Centers text horizontally */
-    margin-top: -15px;
-    padding: 25px 0;
-    border-bottom: 1px solid #E0E3EB !important;
-    text-align: center;
-    /* Centers text in the column */
-}
-
-/* Remove border from last stat item */
-.stats-item:last-of-type {
-    border: none !important;
-}
-
-/* Adjust Font Sizes & Weight */
-.stat-label {
-    color: #9FA2B4;
-    font-size: 16px;
-    font-weight: 500;
-}
-
-.stat-value {
-    font-size: 24px;
-    font-weight: bold;
-    display: block;
-    /* Ensures it's always on a new line */
-}
-
-.col-lg-4 {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* Distributes space evenly */
-    gap: 5px; /* Adjusts space between each stat */
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Responsive Sidebar */
-/* @media (max-width: 768px) {
+@media (min-width: 768px) {
+
+    /* General Styles */
+    body {
+        font-family: "Mulish", sans-serif;
+        background-color: #F7F8FC;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Sidebar Styles */
     .sidebar {
-        width: 80px;
+        height: 100vh;
+        background-color: #363740;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        position: fixed;
+        width: 300px;
+    }
+
+    .sidebar-logo {
+        display: flex;
         align-items: center;
+        /* Ensures vertical alignment */
+        gap: 12px;
+        /* Space between icon and text */
+        padding: 10px 32px;
+        margin-top: 37px;
+        /* Adjust this value as needed */
+    }
+
+    .sidebar-logo-img {
+        width: 32px;
+        height: 32px;
+        object-fit: contain;
     }
 
     .sidebar-logo h4 {
-        display: none;
+        color: #A4A6B3;
+        font-size: 19px;
+        font-weight: 600;
+        margin: 0;
+        line-height: 1;
+    }
+
+    /* Sidebar Menu */
+    .sidebar-menu {
+        list-style: none;
+        padding-left: 0;
+        margin-top: 20px;
+        width: 100%;
+    }
+
+    .sidebar-menu .nav-item {
+        width: 100%;
     }
 
     .sidebar-menu a {
-        justify-content: center;
-        padding: 12px;
+        text-decoration: none;
+        color: #A4A6B3;
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+        font-weight: 500;
+        padding: 12px 32px;
+        transition: all 0.3s ease;
+        gap: 12px;
     }
 
-    .sidebar-menu a span {
-        display: none;
+    .sidebar-menu a img {
+        width: 20px;
+        height: 20px;
     }
 
     .sidebar-menu a.active {
-        border-left: none;
+        color: #DDE2FF;
+        background-color: rgba(221, 226, 255, 0.1);
+        border-left: 4px solid #DDE2FF;
+        padding-left: 28px;
     }
-} */
+
+    .sidebar-menu a:hover {
+        color: #DDE2FF;
+        background-color: rgba(221, 226, 255, 0.05);
+    }
+
+    main {
+        margin-left: 285px;
+        width: calc(100% - 285px);
+    }
+
+    .top-navbar {
+        padding: 15px 20px;
+        border-radius: 8px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .mb-0 {
+        color: #252733;
+        font-size: 24px;
+        font-weight: 600;
+    }
+
+    .row.g-3 {
+        display: flex;
+        justify-content: space-between;
+        /* Ensures equal spacing */
+        align-items: center;
+        flex-wrap: nowrap;
+        /* Prevents wrapping */
+        gap: 4px;
+    }
+
+    .row.g-3.mt-4 {
+        margin-left: 10px;
+    }
+
+    .card {
+        flex: 1;
+        /* Ensures all cards take equal space */
+        width: 300px;
+        /* Keeps consistent sizing */
+        height: 134px;
+        /* Matches your design */
+        padding: 35px !important;
+        text-align: center;
+        border-radius: 8px;
+        /* Smooth rounded corners */
+        border: 1px solid #E0E3EB;
+        /* Light gray border */
+        background: white;
+        box-shadow: none;
+        /* Removes any extra shadow */
+    }
+
+
+
+    .card.border-primary {
+        position: relative;
+        /* Ensures proper layering */
+        border: 2px solid #3B82F6 !important;
+        /* Primary blue border */
+        border-radius: 8px;
+        /* Keeps smooth edges */
+    }
+
+    /* Outer stroke effect */
+    .card.border-primary::before {
+        content: "";
+        position: absolute;
+        top: -4px;
+        left: -4px;
+        right: -4px;
+        bottom: -4px;
+        border: 2px solid #DDE2FF;
+        /* Outer light stroke */
+        border-radius: 10px;
+        /* Makes sure it follows the shape */
+        z-index: -1;
+        /* Places it behind the card */
+    }
+
+    .card.border-primary h6 {
+        color: #3B82F6 !important;
+        /* Matches the blue border */
+        font-weight: 600;
+        /* Optional: Makes it slightly bolder */
+    }
+
+    /* Graph & Stats Section */
+    .full-card {
+        width: 100%;
+        min-height: 680px;
+        border-radius: 12px;
+        border: 1px solid #E0E3EB;
+        background: white;
+        padding: 24px;
+        display: flex;
+        align-items: stretch;
+        margin-top: 50px;
+        /* Add margin above the graph */
+    }
+
+    /* Ensure Title & Date Alignment */
+    .col-lg-8 h6,
+    .col-lg-8 p {
+        text-align: left;
+        margin: 0;
+    }
+
+    .col-lg-8 h6 {
+        font-size: 19px;
+    }
+
+    .col-lg-8 p {
+        font-size: 12px;
+        color: #9FA2B4 !important;
+        margin-bottom: 20px;
+    }
+
+    /* Align Graph with Margin */
+    .graph-wrapper {
+        margin-top: 50px;
+        /* Adds spacing between graph and title */
+    }
+
+    /* Align Legend Image to the Right */
+    .legend-img {
+        height: 20px;
+        width: auto;
+        object-fit: contain;
+        max-width: 100%;
+        margin-left: auto;
+    }
+
+    /* Right-Side Stats Section */
+    .stats-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 50px;
+        /* Ensures spacing between graph and stats */
+    }
+
+    /* Individual Stat Items */
+    .stat-item {
+        display: flex;
+        flex-direction: column;
+        /* Ensures text is stacked */
+        align-items: center;
+        /* Centers text horizontally */
+        margin-top: 10px;
+        padding-bottom: 40px;
+        border-bottom: 1px solid #E0E3EB !important;
+        text-align: center;
+        /* Centers text in the column */
+    }
+
+    /* Remove border from last stat item */
+    .stats-item:last-of-type {
+        border: none !important;
+    }
+
+    /* Adjust Font Sizes & Weight */
+    .stat-label {
+        color: #9FA2B4;
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    .stat-value {
+        font-size: 24px;
+        font-weight: bold;
+        display: block;
+        /* Ensures it's always on a new line */
+    }
+
+    .col-lg-4 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        /* Distributes space evenly */
+        gap: 25px;
+        /* Adjusts space between each stat */
+    }
+
+    /* Card Styling */
+    .custom-card {
+        border: none;
+        border-radius: 12px;
+        background: white;
+        border: 1px solid #E0E3EB;
+        width: 100%;
+        min-height: 380px;
+        padding: 24px;
+    }
+
+    /* Ensure Flexbox Layout */
+    .row {
+        display: flex;
+        justify-content: space-between;
+        /* Keeps cards apart */
+        align-items: flex-start;
+    }
+
+    .row.gx-4 {
+        margin-top: 50px;
+    }
+
+    /* Fix List Group Styling */
+    .custom-list-group {
+        border-radius: 12px;
+        overflow: hidden;
+        width: 100%;
+    }
+
+    .fw-bold.mb-0 {
+        font-size: 19px;
+        font-weight: 600;
+    }
+
+    .custom-list-group {
+        border: none; /* Remove default box border */
+    }
+    
+    /* Add clean dividers instead of a box */
+    .custom-list-group .list-group-item {
+        display: flex;
+        border-bottom: 1px solid #E0E3EB;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-radius: 0;
+        padding: 15px 20px;
+        background-color: white; /* Ensure no shadow effect */
+        margin-bottom: 10px;
+
+    }
+
+    .custom-list-group .list-group-item span:last-child {
+        margin-left: auto;
+        color: #252733;
+        font-size: 16px;
+    }
+    
+    /* Ensure the last list item doesn't have a border */
+    .custom-list-group .list-group-item:last-child {
+        border-bottom: none;
+    }
+
+    .text-primary {
+        text-decoration: none;
+    }
+
+    .text-muted {
+        font-size: 12px;
+        color: #9FA2B4 !important;
+    }
+
+    /* Fix checkbox alignment */
+    .task-checkbox {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    /* Badge Styling */
+    .custom-badge {
+        font-size: 11px;
+        padding: 6px 12px;
+        border-radius: 8px;
+        font-weight: 600;
+    }
+
+    /* Remove Grey Circle Issue */
+    .task-circle {
+        display: none !important;
+    }
+
+    /* Fix Task Section */
+    .form-check-input {
+        width: 15px;
+        height: 15px;
+        border-radius: 50px;
+        /* Makes it circular */
+        border: 2px solid #B0B3C2;
+        background-color: white;
+        appearance: none;
+        /* Removes default checkbox styling */
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .form-check-input[type="checkbox"] {
+        border-radius: 50%;
+        /* Ensures round shape */
+    }
+
+    /* Add checkmark effect */
+    .form-check-input:checked {
+        background-color: #3B82F6;
+        /* Blue background when checked */
+        border-color: #3B82F6;
+        position: relative;
+    }
+
+    .custom-checkbox:checked {
+        background-color: #3B82F6;
+        /* Blue background */
+        border-color: #3B82F6;
+        position: relative;
+    }
+
+    /* Ensure Buttons are Aligned */
+    .btn-light {
+        border: none;
+        background: #F7F8FC;
+        color: #6C757D;
+        font-size: 16px;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .badge.bg-secondary {
+        color: #F0F1F7 !important;
+        font-size: 11px !important;
+    }
+
+    .badge.bg-warning {
+        color: white !important;
+        font-size: 11px !important;
+    }
+
+    .badge.bg-success {
+        color: white !important;
+        font-size: 11px !important;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Responsive Styles for Mobile & Tablets */
+@media (max-width: 768px) {
+
+    /* Hide Sidebar Completely */
+    .sidebar {
+        display: none !important;
+    }
+
+    /* Adjust Main Content to Full Width */
+    main {
+        margin-left: 0 !important;
+        width: 100% !important;
+    }
+
+    /* Ensure Full-Width Graph & Stats */
+    .full-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* Center content */
+        padding: 24px;
+        width: 100%;
+        min-height: 900px;
+        text-align: center;
+    }
+
+    /* Stack rows vertically */
+    .row.g-3 {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* Graph Section Styling */
+    .col-lg-8 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .col-lg-8 h6,
+    .col-lg-8 p {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    /* Center the Title & Graph Help Image */
+    .d-flex.justify-content-between.align-items-center {
+        flex-direction: column !important;
+        /* Stack items vertically */
+        align-items: center !important;
+        /* Ensure everything is centered */
+    }
+
+    /* Ensure the legend image is centered below title */
+    .legend-img {
+        width: auto;
+        max-width: 100%;
+        margin-top: 10px;
+        /* Space between text and image */
+        display: block;
+    }
+
+    /* Adjust Right-Side Stats */
+    .col-lg-4 {
+        width: 100%;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    /* Ensure each stat is centered properly */
+    .stat-item {
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+
+}
