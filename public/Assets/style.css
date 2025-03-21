@@ -474,7 +474,7 @@
         color: #9FA2B4;
     }
 
-    
+
 
 
 
@@ -519,79 +519,260 @@
 /* Responsive Styles for Mobile & Tablets */
 @media (max-width: 768px) {
 
+    body {
+        font-family: "Mulish", sans-serif;
+        background-color: #F7F8FC;
+        margin: 0;
+        padding: 0;
+    }
+
     /* Hide Sidebar Completely */
     .sidebar {
         display: none !important;
     }
 
-    /* Adjust Main Content to Full Width */
     main {
         margin-left: 0 !important;
         width: 100% !important;
     }
 
-    /* Ensure Full-Width Graph & Stats */
-    .full-card {
+
+    /* --------- TOP NAVBAR --------- */
+    .top-navbar {
+        padding: 15px 20px;
+        border-radius: 8px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* --------- GENERAL CARD STYLING --------- */
+    .custom-card {
+        border: none;
+        border-radius: 12px;
+        background: white;
+        border: 1px solid #E0E3EB;
+        width: 100%;
+        min-height: 380px;
+        padding: 24px;
+    }
+
+    /* --------- TASKS & UNRESOLVED TICKETS --------- */
+    .row {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .col-lg-6 {
+        width: 100%;
+    }
+
+    .custom-card {
+        padding: 20px;
+    }
+
+    .legend-img {
+        height: 15px;
+        width: auto;
+        object-fit: contain;
+        max-width: 100%;
+        margin-left: auto;
+    }
+
+    .img-fluid {
+        margin-bottom: 35px;
+    }
+
+    .col-lg-4 {
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        /* Centers everything inside */
         align-items: center;
-        /* Center content */
-        padding: 24px;
+        /* Centers all children */
+        gap: 15px;
+        /* padding-top: 35px; */
         width: 100%;
-        min-height: 900px;
-        text-align: center;
+        /* Ensure full width */
     }
 
-    /* Stack rows vertically */
-    .row.g-3 {
+    .stat-item {
+        display: flex;
         flex-direction: column;
-        gap: 10px;
-    }
-
-    /* Graph Section Styling */
-    .col-lg-8 {
+        justify-content: center;
+        /* Ensures vertical centering */
+        align-items: center;
+        /* Ensures horizontal centering */
+        text-align: center;
         width: 100%;
-        text-align: center;
+        /* Ensures full width for alignment */
+        padding-bottom: 30px;
+        border-bottom: 1px solid #E0E3EB !important;
     }
 
-    .col-lg-8 h6,
-    .col-lg-8 p {
-        text-align: center;
-        margin-bottom: 20px;
+    /* Ensure last item has no border */
+    .stat-item:last-of-type {
+        border-bottom: none !important;
     }
 
-    /* Center the Title & Graph Help Image */
-    .d-flex.justify-content-between.align-items-center {
-        flex-direction: column !important;
-        /* Stack items vertically */
+    /* Ensure text inside the items is centered */
+    /* Adjust Font Sizes & Weight */
+    .stat-label {
+        color: #9FA2B4;
+        font-size: 16px;
+        font-weight: 500;
+        text-align: center !important;
+        justify-content: center !important;
         align-items: center !important;
-        /* Ensure everything is centered */
+        width: 100% !important;
     }
 
-    /* Ensure the legend image is centered below title */
-    .legend-img {
-        width: auto;
-        max-width: 100%;
-        margin-top: 10px;
-        /* Space between text and image */
+    .stat-value {
+        font-size: 24px;
+        font-weight: bold;
+        display: block;
+        text-align: center !important;
+        justify-content: center !important;
+        align-items: center !important;
+        width: 100% !important;
+    }
+
+
+    /* --------- LIST GROUP STYLING (LINES FULL WIDTH) --------- */
+    .custom-list-group {
+        border-radius: 12px;
+        overflow: hidden;
+        width: 100%;
+        border: none;
+        /* Remove default box border */
+    }
+
+    .custom-list-group .list-group-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid #E0E3EB;
+        padding: 15px 20px;
+        background-color: white;
+        /* Ensure no shadow effect */
+        width: calc(100% + 40px);
+        /* Extend lines to full width */
+        margin-left: -20px;
+        /* Shift to align with the card */
+        margin-right: -20px;
+    }
+
+    .custom-list-group .list-group-item:last-child {
+        border-bottom: none;
+    }
+
+    /* --------- TASK CHECKBOXES (ROUND & BLUE CHECKED) --------- */
+    .form-check-input {
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        border: 2px solid #B0B3C2;
+        background-color: white;
+        appearance: none;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .form-check-input:checked {
+        background-color: #3B82F6;
+        border-color: #3B82F6;
+        position: relative;
+    }
+
+    .form-check-input:checked::before {
+        content: "✓";
+        color: white;
+        font-size: 12px;
+        font-weight: bold;
+        text-align: center;
         display: block;
     }
 
-    /* Adjust Right-Side Stats */
-    .col-lg-4 {
-        width: 100%;
-        text-align: center;
-        margin-top: 20px;
+    /* --------- TASKS SECTION (ALIGN TEXT TO "CREATE NEW TASK") --------- */
+    .text-primary {
+        text-decoration: none;
     }
 
-    /* Ensure each stat is centered properly */
-    .stat-item {
-        width: 100%;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    .text-muted {
+        font-size: 12px;
+        color: #9FA2B4 !important;
     }
+
+    .task-checkbox {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    /* --------- BADGES STYLING --------- */
+    .custom-badge {
+        font-size: 11px;
+        padding: 6px 12px;
+        border-radius: 8px;
+        font-weight: 600;
+    }
+
+    .badge.bg-secondary {
+        color: #F0F1F7 !important;
+        font-size: 11px !important;
+    }
+
+    .badge.bg-warning {
+        color: white !important;
+        font-size: 11px !important;
+    }
+
+    .badge.bg-success {
+        color: white !important;
+        font-size: 11px !important;
+    }
+
+    /* --------- CREATE NEW TASK + BUTTON --------- */
+    .text-muted.small.mb-0 {
+        font-size: 16px !important;
+        padding-bottom: 20px;
+    }
+
+    .add-task-btn {
+        width: 32px;
+        height: 32px;
+        border-radius: 8px;
+        background-color: #F7F8FC;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: background-color 0.2s ease-in-out;
+        margin-bottom: 20px;
+    }
+
+    .add-task-btn:hover {
+        background-color: #E0E3EB;
+    }
+
+    .plus-icon {
+        font-size: 20px;
+        font-weight: bold;
+        color: #9FA2B4;
+    }
+
+    /* --------- FIRST LIST ITEM FIX --------- */
+    .col-lg-6:last-child .custom-list-group .list-group-item:first-child {
+        border-top: 1px solid #E0E3EB;
+    }
+
+
+
+
 
 
 
