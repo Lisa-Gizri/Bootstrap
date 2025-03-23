@@ -218,3 +218,424 @@ $bg-hover: #F7F8FC;
     border-top: 1px solid $light-gray;
   }
 }
+
+@media (min-width: 768px) {
+
+    // Base styling
+    body {
+      font-family: $font-family;
+      background-color: $bg-hover;
+      margin: 0;
+      padding: 0;
+    }
+  
+    // Sidebar container
+    .sidebar {
+      height: 100vh;
+      background-color: $sidebar-dark;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      position: fixed;
+      width: 300px;
+    }
+  
+    // Sidebar logo alignment
+    .sidebar-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 32px;
+      margin-top: 37px;
+    }
+  
+    .sidebar-logo-img {
+      width: 32px;
+      height: 32px;
+      object-fit: contain;
+    }
+  
+    .sidebar-logo h4 {
+      color: $text-muted;
+      font-size: 19px;
+      font-weight: 600;
+      margin: 0;
+      line-height: 1;
+    }
+  
+    // Sidebar navigation menu
+    .sidebar-menu {
+      list-style: none;
+      padding-left: 0;
+      margin-top: 20px;
+      width: 100%;
+    }
+  
+    .sidebar-menu .nav-item {
+      width: 100%;
+    }
+  
+    .sidebar-menu a {
+      text-decoration: none;
+      color: $text-muted;
+      display: flex;
+      align-items: center;
+      font-size: 16px;
+      font-weight: 500;
+      padding: 12px 32px;
+      transition: all 0.3s ease;
+      gap: 12px;
+    }
+  
+    .sidebar-menu a img {
+      width: 20px;
+      height: 20px;
+    }
+  
+    .sidebar-menu a.active {
+      color: #DDE2FF;
+      background-color: rgba(221, 226, 255, 0.1);
+      border-left: 4px solid #DDE2FF;
+      padding-left: 28px;
+    }
+  
+    .sidebar-menu a:hover {
+      color: #DDE2FF;
+      background-color: rgba(221, 226, 255, 0.05);
+    }
+  
+    // Main content shift
+    main {
+      margin-left: 285px;
+      width: calc(100% - 285px);
+    }
+  
+    // Top navbar styles
+    .top-navbar {
+      padding: 15px 20px;
+      border-radius: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    .mb-0 {
+      color: #252733;
+      font-size: 24px;
+      font-weight: 600;
+    }
+  
+    .row.g-3 {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: nowrap;
+      gap: 4px;
+    }
+  
+    .row.g-3.mt-4 {
+      margin-left: 10px;
+    }
+  
+    // Cards for metrics
+    .card {
+      flex: 1;
+      width: 300px;
+      height: 134px;
+      padding: 35px !important;
+      text-align: center;
+      border-radius: 8px;
+      border: 1px solid $light-gray;
+      background: $bg-white;
+      box-shadow: none;
+    }
+  
+    .card.border-primary {
+      position: relative;
+      border: 2px solid $primary-blue !important;
+      border-radius: 8px;
+    }
+  
+    .card.border-primary::before {
+      content: "";
+      position: absolute;
+      top: -4px;
+      left: -4px;
+      right: -4px;
+      bottom: -4px;
+      border: 2px solid #DDE2FF;
+      border-radius: 10px;
+      z-index: -1;
+    }
+  
+    .card.border-primary h6 {
+      color: $primary-blue !important;
+      font-weight: 600;
+    }
+  
+    // Graph container
+    .full-card {
+      width: 100%;
+      min-height: 680px;
+      border-radius: 12px;
+      border: 1px solid $light-gray;
+      background: $bg-white;
+      padding: 24px;
+      display: flex;
+      align-items: stretch;
+      margin-top: 50px;
+    }
+  
+    .col-lg-8 {
+      border-right: 1px solid $light-gray;
+      padding-right: 20px;
+      margin-top: -34px;
+      margin-bottom: -24px;
+      padding-top: 24px;
+      padding-bottom: 70px;
+    }
+  
+    // Graph title & subtitle
+    .col-lg-8 h6,
+    .col-lg-8 p {
+      text-align: left;
+      margin: 0;
+    }
+  
+    .col-lg-8 h6 {
+      font-size: 19px;
+    }
+  
+    .col-lg-8 p {
+      font-size: 12px;
+      color: $text-muted !important;
+      margin-bottom: 20px;
+    }
+  
+    .graph-wrapper {
+      margin-top: 50px;
+    }
+  
+    .legend-img {
+      height: 20px;
+      width: auto;
+      object-fit: contain;
+      max-width: 100%;
+      margin-left: auto;
+    }
+  
+    // Right stat block layout
+    .stats-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-left: 50px;
+    }
+  
+    .stat-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-bottom: 40px;
+      border-bottom: 1px solid $light-gray !important;
+      text-align: center;
+      margin-left: -50px;
+      margin-right: -35px;
+      padding-left: 50px;
+      padding-right: 35px;
+    }
+  
+    .stat-item:last-of-type {
+      border-bottom: none !important;
+    }
+  
+    .stat-label {
+      color: $text-muted;
+      font-size: 16px;
+      font-weight: 500;
+    }
+  
+    .stat-value {
+      font-size: 24px;
+      font-weight: bold;
+      display: block;
+    }
+  
+    .col-lg-4 {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 37px;
+    }
+  
+    // Secondary cards (Tasks, Tickets)
+    .custom-card {
+      border: 1px solid $light-gray;
+      border-radius: 12px;
+      background: $bg-white;
+      width: 100%;
+      min-height: 380px;
+      padding: 24px;
+      height: 250px;
+    }
+  
+    .row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+  
+    .row.gx-4 {
+      margin-top: 40px;
+    }
+  
+    .custom-list-group {
+      border-radius: 12px;
+      overflow: hidden;
+      width: 100%;
+      border: none;
+    }
+  
+    .custom-list-group .list-group-item {
+      display: flex;
+      border-bottom: 1px solid $light-gray;
+      padding: 15px 20px 20px;
+      background-color: $bg-white;
+      margin-bottom: 10px;
+      width: calc(100% + 40px);
+      margin-left: -20px;
+      margin-right: -20px;
+    }
+  
+    .custom-list-group .list-group-item:last-child {
+      border-bottom: none;
+    }
+  
+    .custom-list-group .list-group-item span:last-child {
+      margin-left: auto;
+      color: #252733;
+      font-size: 16px;
+    }
+  
+    .text-primary {
+      text-decoration: none;
+    }
+  
+    .text-muted {
+      font-size: 12px;
+      color: $text-muted !important;
+    }
+  
+    .task-checkbox {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+  
+    .custom-badge {
+      font-size: 11px;
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-weight: 600;
+    }
+  
+    .task-circle {
+      display: none !important;
+    }
+  
+    .form-check-input {
+      width: 20px;
+      height: 20px;
+      border-radius: 50px;
+      border: 2px solid #B0B3C2;
+      background-color: $bg-white;
+      appearance: none;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .form-check-input[type="checkbox"] {
+      border-radius: 50%;
+    }
+  
+    .form-check-input:checked {
+      background-color: $primary-blue;
+      border-color: $primary-blue;
+      position: relative;
+    }
+  
+    .custom-checkbox:checked {
+      background-color: $primary-blue;
+      border-color: $primary-blue;
+      position: relative;
+    }
+  
+    .col-lg-6 {
+      margin-left: -25px;
+      margin-right: -25px;
+      max-width: 1000px;
+    }
+  
+    .col-lg-6:last-child .custom-list-group .list-group-item:first-child {
+      border-top: 1px solid $light-gray;
+    }
+  
+    .btn-light {
+      border: none;
+      background: $bg-hover;
+      color: #6C757D;
+      font-size: 16px;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .badge.bg-secondary {
+      color: $badge-color !important;
+      font-size: 11px !important;
+    }
+  
+    .badge.bg-warning,
+    .badge.bg-success {
+      color: white !important;
+      font-size: 11px !important;
+    }
+  
+    .text-muted.small.mb-0 {
+      font-size: 16px !important;
+      padding-bottom: 20px;
+    }
+  
+    .add-task-btn {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      background-color: $bg-hover;
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: background-color 0.2s ease-in-out;
+      margin-bottom: 20px;
+    }
+  
+    .add-task-btn:hover {
+      background-color: $light-gray;
+    }
+  
+    .plus-icon {
+      font-size: 20px;
+      font-weight: bold;
+      color: $text-muted;
+    }
+  
+  }
+  
+
