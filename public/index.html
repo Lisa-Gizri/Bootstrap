@@ -58,7 +58,8 @@
                         </div>
                         <div class="d-flex align-items-center gap-2">
                             <span class="fw-semibold">Jones Ferdinand</span>
-                            <img src="Assets/Images/photo.png" class="rounded-circle" alt="User Image" width="32" height="32">
+                            <img src="Assets/Images/photo.png" class="rounded-circle" alt="User Image" width="32"
+                                height="32">
                         </div>
                     </div>
                 </header>
@@ -202,11 +203,23 @@
                     </div>
                 </section>
 
-                
+
             </main>
 
         </div>
     </div>
+
+    <script>
+        // Load the JSON file
+        fetch('data.json')  // Must be in the same directory
+            .then(response => response.json())
+            .then(data => {
+                // Access the overview data
+                document.getElementById('text').textContent = "Text: " + data.overview.unresolved_text;
+                document.getElementById('value').textContent = "Value: " + data.overview.unresolved_value;
+            })
+            .catch(error => console.error('Error loading JSON:', error));
+    </script>
 
 
 </body>
