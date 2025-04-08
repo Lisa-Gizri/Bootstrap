@@ -1,0 +1,26 @@
+{
+  "ticketCards": [
+    {
+      "title": "Unresolved tickets",
+      "group": "Support",
+      "linkText": "View details",
+      "items": [
+        { "label": "Waiting on Feature Request", "value": 4238 },
+        { "label": "Awaiting Customer Response", "value": 1005 },
+        { "label": "Awaiting Developer Fix", "value": 914 },
+        { "label": "Pending", "value": 281 }
+      ]
+    },
+    {
+      "title": "Resolved tickets",
+      "group": "Support",
+      "linkText": "View all",
+      "items": [
+        { "label": "Resolved Last Week", "value": 3265 },
+        { "label": "Resolved Today", "value": 430 },
+        { "label": "Resolved Automatically", "value": 123 },
+        { "label": "Closed", "value": 389 }
+      ]
+    }
+  ]
+}

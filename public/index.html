@@ -209,17 +209,7 @@
         </div>
     </div>
 
-    <script>
-        // Load the JSON file
-        fetch('data.json')  // Must be in the same directory
-            .then(response => response.json())
-            .then(data => {
-                // Access the overview data
-                document.getElementById('text').textContent = "Text: " + data.overview.unresolved_text;
-                document.getElementById('value').textContent = "Value: " + data.overview.unresolved_value;
-            })
-            .catch(error => console.error('Error loading JSON:', error));
-    </script>
+    <script src="main.js"></script>
 
 
 </body>

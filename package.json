@@ -1,7 +1,6 @@
 {
   "name": "untitled",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "start": "lite-server --baseDir=\"public\""
@@ -11,5 +10,6 @@
   "license": "ISC",
   "devDependencies": {
     "lite-server": "^2.6.1"
-  }
+  },
+  "description": ""
 }
